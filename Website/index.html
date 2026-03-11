@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Korea Visa Eligibility Test</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <img src="images/logo.png" alt="Company Logo" class="top-left-logo">
+    <div class="app-container">
+        <!-- Hero Section -->
+        <section id="hero-section" class="screen active-screen">
+            <div class="glass-card text-center slide-up">
+                <div class="badge">Viza olish ehtimolini tekshirish</div>
+                <h1 class="headline">Atigi <span class="highlight">2 daqiqada</span> Koreya vizasini olish ehtimolligingizni bilib oling</h1>
+                <p class="subheadline">8 ta oddiy savolga javob bering va viza tasdiqlanish ehtimolingizni foizda bilib oling.</p>
+                <button id="start-btn" class="primary-btn glow-effect">Testni boshlash</button>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz-section" class="screen">
+            <div class="glass-card quiz-card">
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="question-header">
+                    <span id="question-counter">Savol 1/8</span>
+                </div>
+                <h2 id="question-text" class="question-text">Savol matni bu yerda bo'ladi</h2>
+                <div id="options-container" class="options-container">
+                    <!-- Options injected via JS -->
+                </div>
+                <div class="action-row">
+                    <button id="next-btn" class="primary-btn" disabled>Keyingi savolga o'tish</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Capture Section -->
+        <section id="lead-section" class="screen">
+            <div class="glass-card text-center">
+                <h2 class="section-title">Natijangizni ko‘rish uchun ma’lumotlaringizni kiriting.</h2>
+                <p class="section-desc">Sizning viza tasdiqlanish ehtimolingiz hisoblab chiqildi. Natijani ko‘rish uchun ma’lumotlaringizni kiriting.</p>
+                <form id="lead-form" class="lead-form">
+                    <div class="input-group">
+                        <label for="full-name">Ism Familya</label>
+                        <input type="text" id="full-name" required placeholder="Khoshimov Azizbek" autocomplete="name">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone-number">Telefon raqamingiz</label>
+                        <input type="tel" id="phone-number" required placeholder="+998 99 123 45 67" autocomplete="tel">
+                    </div>
+                    <button type="submit" id="submit-lead-btn" class="primary-btn glow-effect w-100 mt-4">Natijani
+                        ko'rish</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Result Section -->
+        <section id="result-section" class="screen">
+            <div class="glass-card text-center result-card">
+                <h2 class="result-title">Sizning Koreya vizasini olish ehtimolingiz</h2>
+
+                <div class="score-circle-container">
+                    <svg class="progress-ring" width="160" height="160">
+                        <circle class="progress-ring__circle-bg" stroke="rgba(255,255,255,0.1)" stroke-width="12"
+                            fill="transparent" r="70" cx="80" cy="80" />
+                        <circle class="progress-ring__circle" id="score-ring" stroke="url(#gradient)" stroke-width="12"
+                            fill="transparent" r="70" cx="80" cy="80" />
+                        <defs>
+                            <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#3b82f6" />
+                                <stop offset="100%" stop-color="#8b5cf6" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <div class="score-text">
+                        <span id="result-percentage">0</span>%
+                    </div>
+                </div>
+
+                <div class="result-message" id="result-message">
+                    <h3 id="result-heading">Sizning Koreya vizasini olish ehtimolingiz yuqori</h3>
+                    <p id="result-desc">To'g'ri hujjatlarni tayyorlash bilan vizani olish ehtimoli yuqori.</p>
+                </div>
+
+                <button id="restart-btn" class="secondary-btn glow-effect mt-4">Testni qayta topshirish</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
